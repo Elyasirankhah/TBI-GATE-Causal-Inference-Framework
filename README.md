@@ -35,7 +35,7 @@ This repository contains the methodological validation code for our study on het
 
 ```bash
 # Clone the repository
-git clone https://github.com/Elyasirankhah/tbi-gate-causal-inference.git
+git clone https://github.com/Elyasirankhah/TBI-GATE-Causal-Inference-Framework.git
 cd tbi-gate-causal-inference
 
 # Create virtual environment (recommended)
@@ -260,7 +260,7 @@ We welcome contributions! Please:
 - Email: Elyas_irankhah@student.uml.edu
 - ORCID: [0000-0001-7168-3898]
 
-**Project Link:** [https://github.com/Elyasirankhah/tbi-gate-causal-inference](https://github.com/YOUR_USERNAME/tbi-gate-causal-inference)
+**Project Link:** [https://github.com/Elyasirankhah/TBI-GATE-Causal-Inference-Framework]
 
 ---
 
