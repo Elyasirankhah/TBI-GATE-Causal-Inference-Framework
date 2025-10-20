@@ -256,6 +256,8 @@ We welcome contributions! Please:
 **Corresponding Author:** [Elyas Irankhah]
 - Email: Elyas_irankhah@student.uml.edu
 - ORCID: [0000-0001-7168-3898]
+- 
+💬 **Note:** If you would like access to the main analysis code or datasets based on the *All of Us Research Program* or *TBIMS National Database*, please contact the corresponding author directly.
 
 **Project Link:** [https://github.com/Elyasirankhah/TBI-GATE-Causal-Inference-Framework]
 
