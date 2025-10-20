@@ -119,9 +119,7 @@ tbi-gate-causal-inference/
 ├── gate_ite_validation_upgraded.py    # Main IHDP validation script
 ├── siamese_network_fixed.py           # Siamese baseline comparison
 │
-├── data/
-│   └── ihdp_data.csv                  # IHDP benchmark data (loaded from URL)
-│
+├── ihdp_data.csv                  # IHDP benchmark data
 
 ```
 
