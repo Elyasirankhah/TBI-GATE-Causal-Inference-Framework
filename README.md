@@ -176,12 +176,12 @@ If you use this code in your research, please cite:
 }
 
 
-
 ---
 
-## 🛠️ Extending This Work
+## 🧩 Extending This Work
 
 ### Use Your Own Data
+
 
 Replace IHDP data with your own observational study:
 
