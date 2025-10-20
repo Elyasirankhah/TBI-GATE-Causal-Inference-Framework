@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (excluding public IHDP)
+*.csv
+!ihdp_data.csv
+
+# Output files
+outputs/
+*.png
+*.pdf
+*.jpg
+*.jpeg
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+extracted_*
+temp_*
+
+# Protected/sensitive files
+*All_of_Us*
+*AoU*
+*patient*
+*TBIMS*
+Pre-Processing*.ipynb
+
+# Documentation files (keep only code)
+*.docx
+*.pptx
+*.txt
+!requirements.txt
+!LICENSE
+
+# Papers
+Papers/
+*.pdf
+
