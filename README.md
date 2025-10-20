@@ -2,7 +2,6 @@
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://img.shields.io/badge/DOI-pending-orange.svg)](https://doi.org/)
 
 **Group Average Treatment Effects (GATE) Analysis for Traumatic Brain Injury Rehabilitation**
 
