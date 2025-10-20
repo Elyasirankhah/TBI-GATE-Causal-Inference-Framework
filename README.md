@@ -122,9 +122,7 @@ tbi-gate-causal-inference/
 ├── data/
 │   └── ihdp_data.csv                  # IHDP benchmark data (loaded from URL)
 │
-└── outputs/                           # Generated plots (not tracked)
-    ├── gate_bar_chart.png
-    └── risk_benefit_landscape.png
+
 ```
 
 ---
