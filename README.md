@@ -17,10 +17,10 @@ This repository contains the methodological validation code for our study on het
 **Key Innovation:** Integration of medical language model embeddings (768-dimensional representations from TBIMS-pretrained DistilGPT-2) with traditional propensity score methods to capture complex patient heterogeneity.
 
 **Main Findings:**
-- **Phase 1 (ATE):** Early rehabilitation within 3 days reduces 30-day readmission risk by 25.4% (IPTW ATE = -0.254, 95% CI: [-0.322, -0.154])
-- **Phase 2 (GATE):** Treatment effects are heterogeneous—highest-risk patients (Q4) benefit most (GATE = -0.106), while low-risk patients (Q1-Q2) show minimal/harmful effects
+- **Phase 1 (ATE):** Early rehabilitation within 3 days reduces 30-day readmission risk by 10.1% (IPTW ATE = -0.101, 95% CI: [-0.159, -0.042])
+- **Phase 2 (GATE):** Treatment effects are heterogeneous—highest-risk patients (Q4) benefit most (GATE = -0.412), while low-risk patients (Q1-Q2) show harmful effects (+0.087, +0.056)
 - **Phase 3 (LLM Validation):** Counterfactual predictions from Meta-Llama-3.1-8B align with traditional estimators after isotonic calibration
-- **IHDP Benchmark:** sqrt(PEHE) = 0.365 after calibration, demonstrating state-of-the-art performance
+- **IHDP Benchmark:** sqrt(PEHE) = 0.493 after calibration, demonstrating strong performance
 
 ---
 
@@ -110,17 +110,13 @@ See `requirements.txt` for complete list.
 
 ## 📁 Repository Structure
 
-```
 tbi-gate-causal-inference/
-├── README.md                           # This file
-├── LICENSE                             # MIT License
-├── requirements.txt                    # Python dependencies
+├── README.md # This file
+├── LICENSE # MIT License
+├── requirements.txt # Python dependencies
 │
-├── gate_ite_validation_upgraded.py    # Main IHDP validation script
-├── siamese_network_fixed.py           # Siamese baseline comparison
-│
-├── ihdp_data.csv                  # IHDP benchmark data
-
+├── TBI_Validation_Complete_Aligned.py 
+├── ihdp_data.csv # IHDP benchmark data
 ```
 
 ---
@@ -167,7 +163,6 @@ If you use this code in your research, please cite:
   author = {Irankhah, Elyas and Pagare, Madhavi and Zhu, Yidong and Shen, Jiabin and Alam, Mohammad Arif Ul and Wolkowicz, Kelilah L.},
   journal = {Scientific Reports – AI for Clinical Decision-Making Collection},
   year = {2025},
-  note = {Manuscript under review}
 }
 
 
@@ -227,11 +222,6 @@ wget https://raw.githubusercontent.com/AMLab-Amsterdam/CEVAE/master/datasets/IHD
 ```bash
 # Siamese network requires PyTorch
 pip install torch torchvision
-```
-
-**3. "No module named 'xgboost'":**
-```bash
-pip install xgboost
 ```
 
 
