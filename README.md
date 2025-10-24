@@ -109,7 +109,7 @@ See `requirements.txt` for complete list.
 ---
 
 ## 📁 Repository Structure
-
+```
 tbi-gate-causal-inference/
 ├── README.md # This file
 ├── LICENSE # MIT License
