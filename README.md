@@ -18,9 +18,9 @@ This repository contains the methodological validation code for our study on het
 
 **Main Findings:**
 - **Phase 1 (ATE):** Early rehabilitation within 3 days reduces 30-day readmission risk by 10.1% (IPTW ATE = -0.101, 95% CI: [-0.159, -0.042])
-- **Phase 2 (GATE):** Treatment effects are heterogeneous—highest-risk patients (Q4) benefit most (GATE = -0.412), while low-risk patients (Q1-Q2) show harmful effects (+0.087, +0.056)
+- **Phase 2 (GATE):** Treatment effects are heterogeneous highest-risk patients (Q4) benefit most (GATE = -0.412), while low-risk patients (Q1-Q2) show harmful effects (+0.087, +0.056)
 - **Phase 3 (LLM Validation):** Counterfactual predictions from Meta-Llama-3.1-8B align with traditional estimators after isotonic calibration
-- **IHDP Benchmark:** sqrt(PEHE) = 0.493 after calibration, demonstrating strong performance
+- **IHDP Benchmark:** sqrt(PEHE) = 0.493 after calibration
 
 ---
 
