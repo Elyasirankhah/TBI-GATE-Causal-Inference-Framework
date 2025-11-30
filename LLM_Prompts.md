@@ -1,6 +1,6 @@
 # LLM Counterfactual Validation Prompts
 
-This document contains the exact prompts used for LLM-based counterfactual prediction in our TBI rehabilitation study, as documented in the manuscript appendix.
+This document contains the exact prompts used for LLM-based counterfactual prediction in our TBI rehabilitation study.
 
 ---
 
@@ -101,86 +101,6 @@ Consistency with IPTW/AIPW estimates
 
 ---
 
-## 📊 Implementation Details
-
-### Response Parsing
-
-```python
-def parse_llm_response(response_text):
-    """
-    Parse LLM response to extract probability and reasoning.
-    
-    Args:
-        response_text (str): Raw LLM response
-        
-    Returns:
-        tuple: (probability, reasoning)
-    """
-    lines = response_text.strip().split('\n')
-    
-    probability = None
-    reasoning = None
-    
-    for line in lines:
-        if line.startswith('Probability:'):
-            try:
-                prob_str = line.split(':')[1].strip()
-                probability = float(prob_str)
-            except:
-                continue
-        elif line.startswith('Reasoning:'):
-            reasoning = line.split(':', 1)[1].strip()
-    
-    return probability, reasoning
-```
-
-### Calibration Implementation
-
-```python
-from sklearn.isotonic import IsotonicRegression
-from sklearn.model_selection import KFold
-
-def calibrate_predictions(y_true, y_pred):
-    """
-    Apply isotonic regression calibration to LLM predictions.
-    
-    Args:
-        y_true: True binary outcomes
-        y_pred: Raw LLM probability predictions
-        
-    Returns:
-        Calibrated predictions
-    """
-    calibrator = IsotonicRegression(out_of_bounds='clip')
-    calibrator.fit(y_pred, y_true)
-    return calibrator.transform(y_pred)
-
-def cross_validate_calibration(X, y, n_folds=5):
-    """
-    Perform k-fold cross-validation for calibration.
-    
-    Args:
-        X: Features
-        y: Outcomes
-        n_folds: Number of folds
-        
-    Returns:
-        Calibrated predictions for each fold
-    """
-    kf = KFold(n_splits=n_folds, shuffle=True, random_state=42)
-    calibrated_preds = np.zeros_like(y, dtype=float)
-    
-    for train_idx, val_idx in kf.split(X):
-        # Train calibrator on training set
-        calibrator = IsotonicRegression()
-        calibrator.fit(y[train_idx], y[train_idx])
-        
-        # Apply to validation set
-        calibrated_preds[val_idx] = calibrator.transform(y[val_idx])
-    
-    return calibrated_preds
-```
-
 ---
 
 ## 🎯 Usage Instructions
@@ -204,12 +124,6 @@ def cross_validate_calibration(X, y, n_folds=5):
 - **IPTW ATE**: -0.0767 (traditional method)
 - **Alignment**: Both methods show benefit (negative ATE)
 
-### Key Findings
-
-- ✅ **Label Correction**: Treated patients have lower readmission (0.243 vs 0.352)
-- ✅ **Calibration Success**: Raw +0.0394 → Calibrated -0.1089
-- ✅ **Method Alignment**: LLM and IPTW both show benefit
-- ✅ **Clinical Validation**: Results align with clinical expectation
 
 ---
 
@@ -234,3 +148,4 @@ For questions about LLM prompt design or counterfactual validation:
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
